@@ -1,0 +1,14 @@
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.deps.json
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.runtimeconfig.json
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.runtimeconfig.dev.json
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.dll
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.pdb
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.csprojAssemblyReference.cache
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.csproj.CoreCompileInputs.cache
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorAssemblyInfo.cache
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorAssemblyInfo.cs
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.AssemblyInfoInputs.cache
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.AssemblyInfo.cs
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorTargetAssemblyInfo.cache
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.dll
+c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.pdb
