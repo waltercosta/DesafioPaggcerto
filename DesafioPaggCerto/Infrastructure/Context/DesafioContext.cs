@@ -1,5 +1,7 @@
 ﻿using DesafioPaggCerto.Models.EntityModel.Acquirer;
-using DesafioPaggCerto.Models.EntityModel.AdvancePayments;
+using DesafioPaggCerto.Models.EntityModel.AdvancedPayments;
+using DesafioPaggCerto.Models.EntityModel.Installments;
+using DesafioPaggCerto.Models.EntityModel.Shopkeepers;
 using DesafioPaggCerto.Models.EntityModel.Transactions;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,9 +9,11 @@ namespace DesafioPaggCerto.Infrastructure.Context
 {
     public class DesafioContext : DbContext
     {
-        DbSet<Acquirer> Acquirers { get; set; }
-        DbSet<Transaction> Transactions { get; set; }
-        DbSet<AdvancePayment> AdvancePayments { get; set; }
+        public DbSet<Acquirer> Acquirers { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<AdvancedPayment> AdvancePayments { get; set; }
+        public DbSet<Installment> Installments { get; set; }
+        public DbSet<Shopkeeper> Shopkeepers { get; set; }
 
         public DesafioContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
@@ -19,7 +23,9 @@ namespace DesafioPaggCerto.Infrastructure.Context
         {
             modelBuilder.Entity<Acquirer>().Configure();
             modelBuilder.Entity<Transaction>().Configure();
-            modelBuilder.Entity<AdvancePayment>().Configure();
+            modelBuilder.Entity<AdvancedPayment>().Configure();
+            modelBuilder.Entity<Installment>().Configure();
+            modelBuilder.Entity<Shopkeeper>().Configure();
         }
     }
 }

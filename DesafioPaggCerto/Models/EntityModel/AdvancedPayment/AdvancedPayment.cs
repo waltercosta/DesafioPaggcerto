@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace DesafioPaggCerto.Models.EntityModel.AdvancePayments
+namespace DesafioPaggCerto.Models.EntityModel.AdvancedPayments
 {
-    public class AdvancePayment
+    public class AdvancedPayment
     {
         public long Id { get; set; }
         public DateTime RequestedOn { get; set; }

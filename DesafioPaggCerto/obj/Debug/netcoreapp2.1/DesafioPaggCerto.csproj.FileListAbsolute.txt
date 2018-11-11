@@ -12,3 +12,17 @@ c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPa
 c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorTargetAssemblyInfo.cache
 c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.dll
 c:\users\walter\documents\visual studio 2017\Projects\DesafioPaggCerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.pdb
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.deps.json
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.runtimeconfig.json
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.runtimeconfig.dev.json
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.dll
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\bin\Debug\netcoreapp2.1\DesafioPaggCerto.pdb
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.csprojAssemblyReference.cache
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.csproj.CoreCompileInputs.cache
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorAssemblyInfo.cache
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorAssemblyInfo.cs
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.AssemblyInfoInputs.cache
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.AssemblyInfo.cs
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.RazorTargetAssemblyInfo.cache
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.dll
+C:\Projects\DesafioPaggcerto\DesafioPaggCerto\obj\Debug\netcoreapp2.1\DesafioPaggCerto.pdb

@@ -7,13 +7,9 @@ namespace DesafioPaggCerto.Models.EntityModel.Acquirer
     {
         public static void Configure(this EntityTypeBuilder<Acquirer> entity)
         {
-            #region ToTable
             entity.ToTable("Adquirente", "pagamentos");
-            #endregion
 
-            #region Keys
             entity.HasKey(p => p.Id);
-            #endregion
 
             #region Properties
             entity.Property(p => p.Id).ValueGeneratedOnAdd();

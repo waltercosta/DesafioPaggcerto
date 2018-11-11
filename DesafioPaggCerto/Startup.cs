@@ -1,4 +1,5 @@
 ﻿using DesafioPaggCerto.Infrastructure.Context;
+using DesafioPaggCerto.Models.ServiceModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,10 @@ namespace DesafioPaggCerto
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(options => options.MaxModelValidationErrors = 50)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<PaymentDomain>();
 
             services.AddDbContext<DesafioContext>(options =>
             {

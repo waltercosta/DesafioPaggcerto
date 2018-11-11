@@ -1,19 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DesafioPaggCerto.Models.EntityModel.AdvancePayments
+namespace DesafioPaggCerto.Models.EntityModel.AdvancedPayments
 {
-    public static class AdvancePaymentMap
+    public static class AdvancedPaymentMap
     {
-        public static void Configure(this EntityTypeBuilder<AdvancePayment> entity)
+        public static void Configure(this EntityTypeBuilder<AdvancedPayment> entity)
         {
-            #region ToTable
             entity.ToTable("Antecipacao", "pagamentos");
-            #endregion
 
-            #region Keys
             entity.HasKey(p => p.Id);
-            #endregion
 
             #region Properties
             entity.Property(p => p.Id).ValueGeneratedOnAdd();
@@ -36,7 +32,8 @@ namespace DesafioPaggCerto.Models.EntityModel.AdvancePayments
                   .IsRequired();
 
             entity.Property(p => p.FullyAmountTransferred)
-                  .HasColumnName("ValorRepasse");
+                  .HasColumnName("ValorRepasse")
+                  .HasColumnType("decimal(8,2)");
 
             entity.Property(p => p.Tax)
                   .HasColumnName("Taxa")
@@ -46,7 +43,7 @@ namespace DesafioPaggCerto.Models.EntityModel.AdvancePayments
 
             #region Relationships
             entity.HasMany(p => p.AmountRequestedList)
-                  .WithOne(p => p.AdvancePayment);
+                  .WithOne(p => p.AdvancedPayment);
             #endregion
         }
     }
