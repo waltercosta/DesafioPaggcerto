@@ -1,6 +1,4 @@
-﻿using DesafioPaggCerto.Infrastructure.Validations;
-using DesafioPaggCerto.Models.EntityModel.Transactions;
-using DesafioPaggCerto.Models.ServiceModel;
+﻿using DesafioPaggCerto.Models.ServiceModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace DesafioPaggCerto.Models.ViewModel
@@ -19,7 +17,7 @@ namespace DesafioPaggCerto.Models.ViewModel
         public string FullName { get; set; }
         [Required]
         public decimal? PurchaseValue { get; set; }
-        [Required]
+        [Required, Range (1, 12)]
         public int? Installment { get; set; }
         [Required]
         public long? IdShopKeeper { get; set; }

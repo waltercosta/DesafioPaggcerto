@@ -27,11 +27,17 @@ namespace DesafioPaggCerto.Models.ServiceModel
         {
             var transaction = new Transaction();
             transaction.CardNumber = CardNumber.CardMask();
-            transaction.Amount = PurchaseValue.Value;
+            transaction.Cvv = Cvv;
+            transaction.Month = Month.Value;
+            transaction.Year = Year.Value;
+            transaction.FullName = FullName;
+            transaction.Amount = PurchaseValue.Value ;
+            transaction.Installment = Installment.Value;
+
 
             var acquirer = await _desafioContext.Acquirers.FindAsync(1);
 
-            transaction.NetAmount = PurchaseValue.Value -(PurchaseValue.Value * (acquirer.Tax/100));
+            transaction.NetAmount = PurchaseValue.Value - (PurchaseValue.Value * (acquirer.Tax/100));
         }
     }
 }
