@@ -41,10 +41,8 @@ namespace DesafioPaggCerto.Models.EntityModel.AdvancedPayments
                   .IsRequired();
             #endregion
 
-            #region Relationships
             entity.HasMany(p => p.AmountRequestedList)
                   .WithOne(p => p.AdvancedPayment);
-            #endregion
         }
     }
 }

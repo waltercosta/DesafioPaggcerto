@@ -1,6 +1,8 @@
 ﻿using DesafioPaggCerto.Extensions;
 using DesafioPaggCerto.Infrastructure.Context;
 using DesafioPaggCerto.Models.EntityModel.Transactions;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DesafioPaggCerto.Models.ServiceModel
@@ -22,22 +24,41 @@ namespace DesafioPaggCerto.Models.ServiceModel
         public decimal? PurchaseValue { get; set; }
         public int? Installment { get; set; }
         public long? IdShopKeeper { get; set; }
+        public Transaction Transaction { get; set; }
 
-        public async Task Pay()
+        public async Task<bool> Pay()
         {
-            var transaction = new Transaction();
-            transaction.CardNumber = CardNumber.CardMask();
-            transaction.Cvv = Cvv;
-            transaction.Month = Month.Value;
-            transaction.Year = Year.Value;
-            transaction.FullName = FullName;
-            transaction.Amount = PurchaseValue.Value ;
-            transaction.Installment = Installment.Value;
+            Transaction = new Transaction();
+            
+            Transaction.CardNumber = CardNumber.CardMask();
+            Transaction.Cvv = Cvv;
+            Transaction.Month = Month.Value;
+            Transaction.Year = Year.Value;
+            Transaction.FullName = FullName;
+            Transaction.Amount = PurchaseValue.Value ;
+            Transaction.Installment = Installment.Value;
+            Transaction.IdShopkeeper = IdShopKeeper.Value;
+            Transaction.Situation = true;
+            Transaction.CreatedAt = DateTime.Now;
 
+            var acquirer = _desafioContext.Acquirers.SingleOrDefault(p => p.Id == 1);
 
-            var acquirer = await _desafioContext.Acquirers.FindAsync(1);
+            if (acquirer == null) return false;
 
-            transaction.NetAmount = PurchaseValue.Value - (PurchaseValue.Value * (acquirer.Tax/100));
+            Transaction.NetAmount = PurchaseValue.Value - (PurchaseValue.Value * (acquirer.Tax/100));
+
+            _desafioContext.Transactions.Add(Transaction);
+
+            try
+            {
+            await _desafioContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
     }
 }

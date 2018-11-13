@@ -106,7 +106,7 @@ namespace DesafioPaggCerto.Migrations
 
             modelBuilder.Entity("DesafioPaggCerto.Models.EntityModel.Shopkeepers.Shopkeeper", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<long?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -150,7 +150,7 @@ namespace DesafioPaggCerto.Migrations
 
                     b.Property<long>("IdShopkeeper");
 
-                    b.Property<int>("InstallmentAmount");
+                    b.Property<int>("Installment");
 
                     b.Property<int>("Month")
                         .HasColumnName("Mes")
@@ -160,11 +160,11 @@ namespace DesafioPaggCerto.Migrations
                         .HasColumnName("ValorLiquido")
                         .HasColumnType("decimal(8,2)");
 
-                    b.Property<decimal>("PassedOnAmount")
+                    b.Property<decimal?>("PassedOnAmount")
                         .HasColumnName("ValorRepasse")
                         .HasColumnType("decimal(8,2)");
 
-                    b.Property<DateTime>("PassedOnAt")
+                    b.Property<DateTime?>("PassedOnAt")
                         .HasColumnName("DataRepasse");
 
                     b.Property<bool>("Situation")

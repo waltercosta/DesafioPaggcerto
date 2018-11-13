@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DesafioPaggCerto.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class AddTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -69,12 +69,12 @@ namespace DesafioPaggCerto.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     IdShopkeeper = table.Column<long>(nullable: false),
                     DataTransacao = table.Column<DateTime>(nullable: false),
-                    DataRepasse = table.Column<DateTime>(nullable: false),
+                    DataRepasse = table.Column<DateTime>(nullable: true),
                     Situacao = table.Column<bool>(nullable: false),
                     ValorTransacao = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
                     ValorLiquido = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
-                    ValorRepasse = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
-                    InstallmentAmount = table.Column<int>(nullable: false),
+                    ValorRepasse = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
+                    Installment = table.Column<int>(nullable: false),
                     AdvancedPaymentId = table.Column<long>(nullable: true),
                     NomeCompleto = table.Column<string>(maxLength: 255, nullable: false),
                     NumeroCartao = table.Column<string>(maxLength: 16, nullable: false),
@@ -144,6 +144,11 @@ namespace DesafioPaggCerto.Migrations
                 schema: "pagamentos",
                 table: "Transacao",
                 column: "IdShopkeeper");
+
+            migrationBuilder.Sql(@"
+                   insert into pagamentos.Lojista (Nome) values ('Walter');
+                   insert into pagamentos.Adquirente (Nome, Taxa) VALUES ('REDE', 3.8);"
+            );
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

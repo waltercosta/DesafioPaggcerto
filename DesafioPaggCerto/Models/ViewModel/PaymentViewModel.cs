@@ -26,11 +26,12 @@ namespace DesafioPaggCerto.Models.ViewModel
         {
             paymentDomain.CardNumber = CardNumber;
             paymentDomain.Cvv = Cvv;
-            paymentDomain.Month = Month;
-            paymentDomain.Year = Year;
+            paymentDomain.Month = Month.Value;
+            paymentDomain.Year = Year.Value;
             paymentDomain.FullName = FullName;
-            paymentDomain.Installment = Installment;
-            paymentDomain.IdShopKeeper = IdShopKeeper;
+            paymentDomain.PurchaseValue = PurchaseValue.Value;
+            paymentDomain.Installment = Installment.Value;
+            paymentDomain.IdShopKeeper = IdShopKeeper.Value;
 
             return paymentDomain;
         }

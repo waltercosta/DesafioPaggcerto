@@ -10,11 +10,11 @@ namespace DesafioPaggCerto.Models.EntityModel.Transactions
         public long IdShopkeeper { get; set; }
         public Shopkeeper Shopkeeper { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime PassedOnAt { get; set; }
+        public DateTime? PassedOnAt { get; set; }
         public bool Situation { get; set; }
         public decimal Amount { get; set; }
         public decimal NetAmount { get; set; }
-        public decimal PassedOnAmount { get; set; }
+        public decimal? PassedOnAmount { get; set; }
         public int Installment { get; set; }
         public AdvancedPayment AdvancedPayment { get; set; }
         public string FullName { get; set; }
