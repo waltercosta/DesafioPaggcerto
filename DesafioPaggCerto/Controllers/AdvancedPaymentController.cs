@@ -11,7 +11,7 @@ namespace DesafioPaggCerto.Controllers
     public class AdvancedPaymentController : Controller
     {
         [Route("create"), HttpPost]
-        public IActionResult Index()
+        public async Task<IActionResult> Create()
         {
             return View();
         }

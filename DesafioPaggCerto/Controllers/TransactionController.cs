@@ -28,14 +28,9 @@ namespace DesafioPaggCerto.Controllers
         }
 
         [Route("list"), HttpGet]
-        public async Task<IActionResult> List([FromServices] DesafioContext desafioContext, [FromQuery] bool isAdvencedPaymented)
-        {
-            var list = desafioContext.Transactions
-                .Where(transaction => (isAdvencedPaymented && transaction.PassedOnAt == null) || (!isAdvencedPaymented))
-                .ToList()
-                .OrderByDescending(p => p.CreatedAt);
-
-            return Ok(list);
+        public async Task<IActionResult> List([FromServices] DesafioContext desafioContext)
+        {       
+            return Ok(desafioContext.Transactions.ToList().OrderByDescending(p => p.CreatedAt));
         }
     }
 }
