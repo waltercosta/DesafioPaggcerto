@@ -24,6 +24,7 @@ namespace DesafioPaggCerto
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<PaymentDomain>();
+            services.AddScoped<AdvancedPaymentDomain>();
 
             services.AddDbContext<DesafioContext>(options =>
             {
